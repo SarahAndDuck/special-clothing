@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="btns-wrapper">
+        <button disabled>СОЗДАТЬ JSON</button>
+        <button disabled id="get">получить JSON</button>
+      </div>
+      <h1 class="title">
+        Коллеги, кому нужна спец одежда (обувь, халат) заполните форму:
+      </h1>
+      <fieldset>
+        <div class="field">
+          <label for="name">Имя</label>
+          <input id="name" value="Иван" type="text" />
+        </div>
+
+        <div class="field">
+          <label for="surname">Фамилия</label>
+          <input id="surname" value="Иванов" type="text" />
+        </div>
+        <div class="field">
+          <label for="clothing-size">Размер одежды</label>
+          <input id="clothing-size" value="54/xl" type="text" />
+        </div>
+        <div class="field">
+          <label for="shoe-size">Размер обуви</label>
+          <input id="shoe-size" value="45" type="text" />
+        </div>
+        <div class="field">
+          <label for="height">Рост</label>
+          <input id="height" value="190" type="text" />
+        </div>
+        <button class="btn" id="update">отправить</button>
+      </fieldset>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

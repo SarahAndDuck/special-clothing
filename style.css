@@ -1,0 +1,125 @@
+ищение стилей*/ *,
+html,
+body {
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+html,
+body {
+  min-height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+button {
+  cursor: pointer;
+}
+body {
+  background-color: #8de4af;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.wrapper {
+  display: inline-block;
+  padding: 10px;
+  max-width: 270px;
+  background-color: #5cdb94;
+}
+.btns-wrapper {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.title {
+  text-align: center;
+  width: 250px;
+  font-size: 20px;
+  color: #05396b;
+  margin-bottom: 20px;
+}
+fieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  gap: 10px;
+  width: 220px;
+}
+fieldset div {
+  width: 200px;
+}
+label {
+  display: block;
+  width: 200px;
+  color: #05396b;
+  margin-bottom: 3px;
+}
+input {
+  display: block;
+  width: 200px;
+  padding: 5px;
+  color: #05396b;
+}
+.btn {
+  background-color: #05396b;
+  border: 1px solid #05396b;
+  color: #5cdb94;
+  padding: 10px 10px;
+  width: 100px;
+  font-size: 16px;
+}
+.btn:hover {
+  background-color: #03090f;
+}
