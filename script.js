@@ -4,7 +4,7 @@ getHundler()
 function getHundler() {
   req.onreadystatechange = () => {
     if (req.readyState == XMLHttpRequest.DONE) {
-      // console.log(req.responseText);
+      console.log(req.responseText);
       people = JSON.parse(req.responseText)
     }
   };
@@ -53,7 +53,7 @@ document.querySelector('#update').addEventListener('click', function () {
     "surname": `${document.querySelector('#surname').value}`,
     "clothingSize": ` ${document.querySelector('#clothing-size').value}`,
     "shoeSize": ` ${document.querySelector('#shoe-size').value}`,
-    "height": `${document.querySelector('#shoe-size').value}`
+    "height": `${document.querySelector('#height').value}`
 
   }
 
