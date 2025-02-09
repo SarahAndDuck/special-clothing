@@ -6,39 +6,79 @@
     <title>Цех СВЧ модулей</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body class="body">
+    <div class="overlay">
+      <div class="modal">
+        <div class="modal__title">Данные успешно отправленны!</div>
+        <button class="modal__btn-close btn">Закрыть</button>
+      </div>
+      <div class="modal-table">
+        <button class="modal__btn-close btn">Закрыть</button>
+      </div>
+    </div>
+
     <div class="wrapper">
       <div class="btns-wrapper">
-        <button class="display-none" disabled>СОЗДАТЬ JSON</button>
-        <button class="display-none" id="get">получить JSON</button>
+        <button class="display-none" id="create">СОЗДАТЬ JSON</button>
+        <button class="btn btn-get" id="get">получить JSON</button>
       </div>
       <h1 class="title">
-        Коллеги, кому нужна спец одежда (обувь, халат) заполните форму:
+        Для заказа спец одежды (обувь, халат) заполните форму:
       </h1>
-      <fieldset>
+      <form>
         <div class="field">
           <label for="name">Имя</label>
-          <input id="name" value="Иван" type="text" />
+          <input
+            class="empty"
+            required
+            id="name"
+            placeholder="Иван"
+            type="text"
+          />
         </div>
 
         <div class="field">
           <label for="surname">Фамилия</label>
-          <input id="surname" value="Иванов" type="text" />
+          <input
+            class="empty"
+            required
+            id="surname"
+            placeholder="Иванов"
+            type="text"
+          />
         </div>
         <div class="field">
           <label for="clothing-size">Размер одежды</label>
-          <input id="clothing-size" value="54/xl" type="text" />
+          <input
+            class="empty"
+            required
+            id="clothing-size"
+            placeholder="54/xl"
+            type="text"
+          />
         </div>
         <div class="field">
           <label for="shoe-size">Размер обуви</label>
-          <input id="shoe-size" value="45" type="text" />
+          <input
+            class="empty"
+            required
+            id="shoe-size"
+            placeholder="45"
+            type="text"
+          />
         </div>
         <div class="field">
           <label for="height">Рост</label>
-          <input id="height" value="190" type="text" />
+          <input
+            class="empty"
+            required
+            id="height"
+            placeholder="190"
+            type="text"
+          />
         </div>
-        <button class="btn" id="update">отправить</button>
-      </fieldset>
+        <input type="submit" class="btn" id="update" />
+      </form>
     </div>
 
     <script src="./script.js"></script>

@@ -1,4 +1,18 @@
-ищение стилей*/ *,
+@font-face {
+  font-family: "SangBleuSunrise-Regular";
+  src: url("./fonts/sangbleusunrise-regular.eot"); /* IE 9 Compatibility Mode */
+  src: url("./fonts/sangbleusunrise-regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE < 9 */ url("../fonts/sangbleusunrise-regular.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("./fonts/sangbleusunrise-regular.woff")
+      format("woff"),
+    /* Firefox >= 3.6, any other modern browser */
+      url("./fonts/sangbleusunrise-regular.ttf") format("truetype"),
+    /* Safari, Android, iOS */
+      url("./fonts/sangbleusunrise-regular.svg#sangbleusunrise-regular")
+      format("svg"); /* Chrome < 4, Legacy iOS */
+}
+
 html,
 body {
   box-sizing: border-box;
@@ -67,7 +81,7 @@ button {
   cursor: pointer;
 }
 body {
-  background-color: #8de4af;
+  background-color: #4c3639;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -75,56 +89,155 @@ body {
 }
 .wrapper {
   display: inline-block;
-
   padding: 10px;
   background-color: transparent;
+  /* box-shadow: 0 5px 30px 0 rgba(255, 255, 255, 0.2); */
 }
 .btns-wrapper {
   display: flex;
   gap: 10px;
   margin-bottom: 20px;
 }
-.title {
+
+.title,
+.modal__title {
+  font-family: "SangBleuSunrise-Regular";
   text-align: center;
   width: 250px;
-  font-size: 20px;
-  color: #05396b;
+  font-size: 16px;
+  line-height: 120%;
+  color: #ffffff;
   margin: 0 auto 20px;
   margin-bottom: 20px;
 }
-fieldset {
+form {
   padding: 40px 50px;
-  background-color: #5cdb94;
+  background-color: #4c3639;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
   gap: 10px;
-  width: 220px;
+  box-shadow: 0 5px 30px 0 rgba(255, 255, 255, 0.2);
 }
-fieldset div {
+form div {
   width: 200px;
 }
 label {
+  color: #fffc;
+  font-family: "SangBleuSunrise-Regular";
   display: block;
   width: 200px;
-  color: #05396b;
   margin-bottom: 3px;
 }
 input {
+  font-family: "SangBleuSunrise-Regular";
   display: block;
   width: 200px;
   padding: 10px 5px;
-  color: #05396b;
+  color: #4c3639;
+  border: 2px solid #f6f6f6;
+  background-color: #f6f6f6;
+}
+input[type="text"].empty {
+  padding: 10px 5px;
+  border: 2px solid #ce1c1c;
+  box-shadow: 0px 5px 10px 2px rgba(174, 8, 28, 0.2) inset;
 }
 .btn {
-  background-color: #05396b;
-  border: 1px solid #05396b;
-  color: #5cdb94;
-  padding: 10px 10px;
-  width: 100px;
+  background-color: #4c3639;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  padding: 10px 50px;
+
   font-size: 16px;
+  border-radius: 2.5em;
+}
+.btn-get {
+  font-family: "SangBleuSunrise-Regular";
+  padding: 7px 15px;
+  font-size: 14px;
+  border: 2px solid #593e43;
+}
+#update {
+  font-family: "SangBleuSunrise-Regular";
+  margin-top: 20px;
 }
 .btn:hover {
-  background-color: #03090f;
+  box-shadow: 0 5px 30px 0 rgba(255, 255, 255, 0.2);
+}
+.btn:disabled:hover {
+  box-shadow: none;
+}
+.modal,
+.modal-table {
+  display: none;
+  min-width: 300px;
+  position: absolute;
+  z-index: 15;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  padding: 20px;
+  transition: all 0.8s;
+  background-color: #4c3639;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  box-shadow: 0 5px 30px 0 rgba(255, 255, 255, 0.2);
+}
+/* модальное окно */
+.overlay {
+  /* display: flex; */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 14;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(56, 55, 55, 0.8);
+  overflow: auto;
+  transition: all 0.8s;
+}
+.body.modal-open {
+  /* overflow: hidden; */
+  touch-action: none;
+}
+.overlay.modal-open {
+  display: flex;
+  transition: all 0.8s;
+}
+.modal.modal-open {
+  display: block;
+  transition: all 0.8s;
+}
+.modal-table.modal-open {
+  display: block;
+  transition: all 0.8s;
+}
+input:disabled {
+  color: darkgray;
+  border: 2px solid dimgrey;
+}
+
+/* table */
+.table {
+  margin-left: -20px;
+  margin-right: -20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+.row {
+  display: flex;
+  padding: 5px 20px;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+.row:not(:nth-child(2n)) {
+  background-color: #967378;
 }
