@@ -14,12 +14,12 @@ function ready() {
   req.setRequestHeader("X-Master-Key", "$2a$10$CwZii0CvYjl6Oyy3BAo.Je8d8wngrMbHNREsVVa7dZ/pIDbQBh5N2");
   req.send();
 
-  if (mySaveSVC == true) {
-    console.log(mySaveSVC);
-    alert('с этого устройства уже отправлены данные')
-    document.querySelectorAll('input[type="text"]').forEach(input => input.classList.remove('empty'))
-    document.querySelectorAll('input').forEach(input => input.setAttribute('disabled', ''))
-  }
+  // if (mySaveSVC == true) {
+  //   console.log(mySaveSVC);
+  //   alert('с этого устройства уже отправлены данные')
+  //   document.querySelectorAll('input[type="text"]').forEach(input => input.classList.remove('empty'))
+  //   document.querySelectorAll('input').forEach(input => input.setAttribute('disabled', ''))
+  // }
 }
 document.addEventListener("DOMContentLoaded", ready);
 
